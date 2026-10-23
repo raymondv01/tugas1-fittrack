@@ -23,5 +23,19 @@ public class TesFitTrack {
         daftarMember[2] = new Member("Citra Dewi", "087890123456", "10-03-2026", "VIP");
         // Object 4: Menggunakan Constructor tanpa paket (otomatis Basic)
         daftarMember[3] = new Member("Dedi Pratama", "089012345678", "20-03-2026");
-}
+
+        System.out.println("\n=== 3. SKENARIO UJI SETTER DENGAN DATA TIDAK VALID ===");
+        System.out.println("Nomor telepon awal Siti: " + daftarMember[1].getNoTelepon());
+        System.out.print("Mencoba mengubah nomor telepon Siti dengan format salah ('123'): ");
+        daftarMember[1].setNoTelepon("123");
+        System.out.println("Nomor telepon Siti setelah percobaan gagal: " + daftarMember[1].getNoTelepon());
+        System.out.println("(Terbukti nilai lama tetap dipertahankan)");
+
+        System.out.println("\n=== 4. MENAMPILKAN SELURUH MEMBER MENGGUNAKAN PERULANGAN FOR ===");
+        System.out.println("-----------------------------------------------------------------------------------------");
+        for (int i = 0; i < daftarMember.length; i++) {
+            System.out.println((i + 1) + ". " + daftarMember[i]);
+        }
+        System.out.println("-----------------------------------------------------------------------------------------");
+    }
 }
